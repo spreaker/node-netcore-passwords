@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/spreaker/node-netcore-passwords/issues"
   },
-  "homepage": "https://github.com/spreaker/node-netcore-passwords#readme"
+  "homepage": "https://github.com/spreaker/node-netcore-passwords#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spreaker/node-netcore-passwords.git"
+  }
 }
