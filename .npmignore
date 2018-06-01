@@ -1,0 +1,5 @@
+Gruntfile.js
+jasmine.json
+src/**/*_spec.js
+.npmignore
+package-lock.json

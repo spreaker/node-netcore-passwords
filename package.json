@@ -1,0 +1,21 @@
+{
+  "name": "netcore-passwords",
+  "version": "1.0.0",
+  "description": ".NET Core compatible password hashing and verification",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "author": "Rocco Zanni <rocco.zanni@spreaker.com>",
+  "license": "MIT",
+  "dependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-shell": "^2.1.0",
+    "jasmine": "^3.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/spreaker/node-netcore-passwords/issues"
+  },
+  "homepage": "https://github.com/spreaker/node-netcore-passwords#readme"
+}
