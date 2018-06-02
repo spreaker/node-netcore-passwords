@@ -28,19 +28,21 @@ Format: { 0x01, prf (UInt32), iter count (UInt32), salt length (UInt32), salt, s
 ### Hashing passwords (Default - Version 3)
 
 ```
+var passwords = require('netcore-passwords');
+
 /*
  * Callback-style
  */
 passwords.hash("qwerty", (err, hash) => {
     console.log(hash);
-})
+});
 
 /*
  * Promise
  */
 passwords.hash("qwerty").then((hash) => {
     console.log(hash);
-})
+});
 
 /*
  * Async / Await
@@ -51,19 +53,21 @@ console.log(await passwords.hash("qwerty"));
 ### Hashing passwords (Version 2)
 
 ```
+var passwords = require('netcore-passwords');
+
 /*
  * Callback-style
  */
 passwords.hash("qwerty", { version: 2 }, (err, hash) => {
     console.log(hash);
-})
+});
 
 /*
  * Promise
  */
 passwords.hash("qwerty", { version: 2 }).then((hash) => {
     console.log(hash);
-})
+});
 
 /*
  * Async / Await
@@ -74,6 +78,8 @@ console.log(await passwords.hash("qwerty", { version: 2 }));
 ### Verify passwords
 
 ```
+var passwords = require('netcore-passwords');
+
 /*
  * Callback-style
  */
