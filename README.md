@@ -25,41 +25,72 @@ Format: { 0x01, prf (UInt32), iter count (UInt32), salt length (UInt32), salt, s
 
 `npm install netcore-passwords`
 
-### Hash passwords
-
-#### Default (V3)
+### Hashing passwords (Default - Version 3)
 
 ```
-const p = require('netcore-passwords');
+/*
+ * Callback-style
+ */ 
+passwords.hash("qwerty", (err, hash) => {
+	console.log(hash);
+})
 
-// Generate hash
-const hash = p.hash('clearTextPassword');
-console.log(hash);
+/*
+ * Promise
+ */ 
+passwords.hash("qwerty").then((hash) => {
+	console.log(hash);
+})
+
+/*
+ * Async / Await
+ */
+console.log(await passwords.hash("qwerty"));
 ```
 
-#### Using a specific version
+### Hashing passwords (Version 2)
 
 ```
-const p = require('netcore-passwords');
+/*
+ * Callback-style
+ */ 
+passwords.hash("qwerty", { version: 2 }, (err, hash) => {
+	console.log(hash);
+})
 
-// Generate hash
-const hash = p.hash('clearTextPassword', { version: 2 });
-console.log(hash);
+/*
+ * Promise
+ */ 
+passwords.hash("qwerty", { version: 2 }).then((hash) => {
+	console.log(hash);
+})
+
+/*
+ * Async / Await
+ */
+console.log(await passwords.hash("qwerty", { version: 2 }));
 ```
 
 ### Verify passwords
 
 ```
-const p = require('netcore-passwords');
+/*
+ * Callback-style
+ */
+passwords.verify("qwerty", "AQAAAAEAACcQAAAAEFsyb88d2/nTrV2QJ3CG6y8ac3QwYBdnb6SR3LT/rG/SZemrHAoh/MrQmxFrqMey5A==", 
+	(err, valid) => { console.log(valid); });
 
-const hash = ''; // Fetch this has from your users database;
+/*
+ * Promise
+ */
+passwords.verify("qwerty", "AQAAAAEAACcQAAAAEFsyb88d2/nTrV2QJ3CG6y8ac3QwYBdnb6SR3LT/rG/SZemrHAoh/MrQmxFrqMey5A==")
+	.then((valid) => { console.log(valid); });
 
-// Verify
-if (p.verify('clearTextPassword', hash)) {
-    console.log("PASSWORD MATCH");
-} else {
-    console.log("PASSWORD DOESN'T MATCH");
-}
+/*
+ * Async / Await
+ */
+console.log(await passwords.verify("qwerty", "AQAAAAEAACcQAAAAEFsyb88d2/nTrV2QJ3CG6y8ac3QwYBdnb6SR3LT/rG/SZemrHAoh/MrQmxFrqMey5A=="));
+
 ```
 
 **NOTE:** you don't need to specify the version when verifying a password. The version is stored in the first byte of the hash, so the library auto-detects it and use the appropriate verification algorithm
