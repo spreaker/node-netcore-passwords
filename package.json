@@ -1,6 +1,6 @@
 {
   "name": "netcore-passwords",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": ".NET Core compatible password hashing and verification",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,10 @@
     "url": "https://github.com/spreaker/node-netcore-passwords.git"
   },
   "keywords": [
-    "dotnet", "netcore", "password", "hashing"
+    "dotnet",
+    "netcore",
+    "password",
+    "hashing"
   ],
   "devDependencies": {
     "grunt": "^1.0.2",
