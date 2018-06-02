@@ -6,20 +6,23 @@
   "scripts": {
     "test": "grunt test"
   },
-  "author": "Rocco Zanni <rocco.zanni@spreaker.com>",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spreaker/node-netcore-passwords.git"
+  },
+  "keywords": [
+    "dotnet", "netcore", "password", "hashing"
+  ],
   "devDependencies": {
     "grunt": "^1.0.2",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-shell": "^2.1.0",
     "jasmine": "^3.1.0"
   },
+  "author": "Rocco Zanni <rocco.zanni@spreaker.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/spreaker/node-netcore-passwords/issues"
   },
-  "homepage": "https://github.com/spreaker/node-netcore-passwords#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/spreaker/node-netcore-passwords.git"
-  }
+  "homepage": "https://github.com/spreaker/node-netcore-passwords#readme"
 }
