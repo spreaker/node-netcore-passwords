@@ -30,16 +30,16 @@ Format: { 0x01, prf (UInt32), iter count (UInt32), salt length (UInt32), salt, s
 ```
 /*
  * Callback-style
- */ 
+ */
 passwords.hash("qwerty", (err, hash) => {
-	console.log(hash);
+    console.log(hash);
 })
 
 /*
  * Promise
- */ 
+ */
 passwords.hash("qwerty").then((hash) => {
-	console.log(hash);
+    console.log(hash);
 })
 
 /*
@@ -53,16 +53,16 @@ console.log(await passwords.hash("qwerty"));
 ```
 /*
  * Callback-style
- */ 
+ */
 passwords.hash("qwerty", { version: 2 }, (err, hash) => {
-	console.log(hash);
+    console.log(hash);
 })
 
 /*
  * Promise
- */ 
+ */
 passwords.hash("qwerty", { version: 2 }).then((hash) => {
-	console.log(hash);
+    console.log(hash);
 })
 
 /*
@@ -77,14 +77,14 @@ console.log(await passwords.hash("qwerty", { version: 2 }));
 /*
  * Callback-style
  */
-passwords.verify("qwerty", "AQAAAAEAACcQAAAAEFsyb88d2/nTrV2QJ3CG6y8ac3QwYBdnb6SR3LT/rG/SZemrHAoh/MrQmxFrqMey5A==", 
-	(err, valid) => { console.log(valid); });
+passwords.verify("qwerty", "AQAAAAEAACcQAAAAEFsyb88d2/nTrV2QJ3CG6y8ac3QwYBdnb6SR3LT/rG/SZemrHAoh/MrQmxFrqMey5A==",
+    (err, valid) => { console.log(valid); });
 
 /*
  * Promise
  */
 passwords.verify("qwerty", "AQAAAAEAACcQAAAAEFsyb88d2/nTrV2QJ3CG6y8ac3QwYBdnb6SR3LT/rG/SZemrHAoh/MrQmxFrqMey5A==")
-	.then((valid) => { console.log(valid); });
+    .then((valid) => { console.log(valid); });
 
 /*
  * Async / Await
